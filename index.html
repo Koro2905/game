@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="hud">
+      <span>🪙 Монеты: <b id="coins">0</b></span>
+      <span>❤️ Жизни: <b id="lives">3</b></span>
+      <span>🏆 Уровень: <b id="level">1</b></span>
+      <span>🔫 Патроны: <b id="ammo">10</b></span>
+    </div>
+
+    <canvas id="game" width="800" height="450"></canvas>
+
+    <div id="overlay" class="overlay">
+      <h1 id="overlay-title">СУПЕР МАРИО</h1>
+      <p id="overlay-text">Собери все монеты и доберись до флага!</p>
+      <button id="start-btn">Играть</button>
+    </div>
+  </div>
+
+  <div class="controls-hint">
+    ← → / A D — движение&nbsp;&nbsp;|&nbsp;&nbsp;Пробел / ↑ / W — прыжок&nbsp;&nbsp;|&nbsp;&nbsp;F или X — стрелять 🔫&nbsp;&nbsp;|&nbsp;&nbsp;R — рестарт
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
