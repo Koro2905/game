@@ -155,7 +155,7 @@ function finishDeath() {
   livesEl.textContent = lives;
   if (lives <= 0) {
     state = "dead";
-    showOverlay("ИГРА ОКОНЧЕНА", `Ты собрал ${coins} монет. Попробуй ещё раз!`, "Заново");
+    showOverlay("GAME OVER", `МОНЕТ: ${coins}   ЖИЗНИ: 0`, "ЗАНОВО");
   } else {
     resetPlayer();
   }
@@ -165,11 +165,11 @@ function nextLevel() {
   levelIndex++;
   if (levelIndex >= LEVELS.length) {
     state = "win";
-    showOverlay("ПОБЕДА! 🎉", `Ты прошёл все уровни и собрал ${coins} монет!`, "Играть снова");
+    showOverlay("YOU WIN!", `МОНЕТ СОБРАНО: ${coins}`, "СНАЧАЛА");
   } else {
     levelEl.textContent = levelIndex + 1;
     state = "levelclear";
-    showOverlay("УРОВЕНЬ ПРОЙДЕН!", `Монет собрано: ${coins}`, "Дальше");
+    showOverlay("УРОВЕНЬ ПРОЙДЕН", `МОНЕТ: ${coins}`, "ДАЛЬШЕ");
   }
 }
 

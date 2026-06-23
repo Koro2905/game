@@ -11,7 +11,7 @@ const startBtn = document.getElementById("start-btn");
 function showOverlay(title, text, btn) {
   overlayTitle.textContent = title;
   overlayText.textContent = text;
-  startBtn.textContent = btn;
+  startBtn.textContent = "▶ " + btn;
   overlay.classList.remove("hidden");
 }
 

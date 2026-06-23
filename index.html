@@ -3,29 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1</title>
+  <title>PIXEL QUEST</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="game-title">✦ PIXEL QUEST ✦</div>
+
   <div class="game-wrapper">
+
+    <!-- HUD (поверх канваса) -->
     <div class="hud">
-      <span>🪙 Монеты: <b id="coins">0</b></span>
-      <span>❤️ Жизни: <b id="lives">3</b></span>
-      <span>🏆 Уровень: <b id="level">1</b></span>
-      <span>🔫 Патроны: <b id="ammo">10</b></span>
+      <div class="hud-item">
+        <span class="hud-icon">🪙</span>
+        <div>
+          <div class="hud-label">МОНЕТЫ</div>
+          <div class="hud-value" id="coins">0</div>
+        </div>
+      </div>
+      <div class="hud-item">
+        <span class="hud-icon">❤️</span>
+        <div>
+          <div class="hud-label">ЖИЗНИ</div>
+          <div class="hud-value" id="lives">3</div>
+        </div>
+      </div>
+      <div class="hud-item">
+        <span class="hud-icon">🏆</span>
+        <div>
+          <div class="hud-label">УРОВЕНЬ</div>
+          <div class="hud-value" id="level">1</div>
+        </div>
+      </div>
+      <div class="hud-item">
+        <span class="hud-icon">🔫</span>
+        <div>
+          <div class="hud-label">ПАТРОНЫ</div>
+          <div class="hud-value" id="ammo">10</div>
+        </div>
+      </div>
     </div>
 
     <canvas id="game" width="800" height="450"></canvas>
 
+    <!-- Оверлей: меню / game over / победа -->
     <div id="overlay" class="overlay">
-      <h1 id="overlay-title">СУПЕР МАРИО</h1>
-      <p id="overlay-text">Собери все монеты и доберись до флага!</p>
-      <button id="start-btn">Играть</button>
+      <h1 id="overlay-title">PIXEL QUEST</h1>
+      <div class="pixel-divider"></div>
+      <p id="overlay-text">Собери монеты и доберись до флага!</p>
+      <button id="start-btn">▶ ИГРАТЬ</button>
     </div>
+
+    <!-- CRT-линии поверх всего -->
+    <div class="scanlines"></div>
+
   </div>
 
+  <!-- Подсказка управления -->
   <div class="controls-hint">
-    ← → / A D — движение&nbsp;&nbsp;|&nbsp;&nbsp;Пробел / ↑ / W — прыжок&nbsp;&nbsp;|&nbsp;&nbsp;F или X — стрелять 🔫&nbsp;&nbsp;|&nbsp;&nbsp;R — рестарт
+    <div class="ctrl-group">
+      <span class="key">← → A D</span>
+      <span>движение</span>
+    </div>
+    <span class="ctrl-sep">|</span>
+    <div class="ctrl-group">
+      <span class="key">↑ W Пробел</span>
+      <span>прыжок</span>
+    </div>
+    <span class="ctrl-sep">|</span>
+    <div class="ctrl-group">
+      <span class="key">F X</span>
+      <span>стрелять</span>
+    </div>
+    <span class="ctrl-sep">|</span>
+    <div class="ctrl-group">
+      <span class="key">R</span>
+      <span>рестарт</span>
+    </div>
   </div>
 
   <!-- Порядок загрузки важен: каждый файл использует переменные из предыдущих -->
